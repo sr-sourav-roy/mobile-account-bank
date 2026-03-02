@@ -6,6 +6,7 @@ document
   .getElementById("add-money-card")
   .addEventListener("click", function () {
     document.getElementById("add-money").style.display = "block";
+    document.getElementById("cashout").style.display = "none";
   });
 
 // cashout btn
