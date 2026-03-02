@@ -12,11 +12,12 @@ document
 
     if (accountNumber.length === 11) {
       if (pinConvertNumber === 1234) {
+        //   link create by other side
         window.location.href = "./main.html";
       } else {
-        console.log("wrong");
+        alert("wrong");
       }
     } else {
-      console.log("wrong");
+      alert("wrong");
     }
   });

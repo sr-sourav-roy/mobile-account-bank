@@ -17,12 +17,14 @@
     <section class="max-w-md min-h-screen mx-auto py-5 bg-slate-200">
       <header>
         <!-- navber -->
-        <nav class="flex justify-between mt-5 mb-15">
+        <nav class="flex justify-between mt-3 mb-15">
           <!-- balance items -->
           <div class="flex items-center gap-3 pl-4">
             <div><img class="w-16" src="./assets/Group.png" alt="" /></div>
             <div>
-              <h1 class="text-3xl font-bold">$45000</h1>
+              <h1 class="text-3xl font-bold">
+                $ <span id="main-balance">4500</span>
+              </h1>
               <p class="text-2xl font-light">Available Balance</p>
             </div>
           </div>
@@ -45,12 +47,18 @@
         <!-- card container -->
         <div class="mt-5 grid grid-cols-3 gap-2 p-3">
           <!-- card_1 -->
-          <div class="box border cursor-pointer p-3 text-center rounded-sm">
+          <div
+            id="add-money-card"
+            class="box border cursor-pointer p-3 text-center rounded-sm"
+          >
             <img class="w-8 mx-auto" src="./assets/wallet1.png" alt="" />
             <h3 class="items-center">Add Money</h3>
           </div>
           <!-- card_2 -->
-          <div class="box border cursor-pointer p-3 text-center rounded-sm">
+          <div
+            id="cashout-card"
+            class="box border cursor-pointer p-3 text-center rounded-sm"
+          >
             <img class="w-8 mx-auto" src="./assets/send1.png" alt="" />
             <h3 class="items-center">Cashout</h3>
           </div>
@@ -77,13 +85,14 @@
         </div>
       </section>
       <!-- add money -->
-      <section>
-        <h1>Add Money</h1>
+      <section id="add-money">
+        <h1 class="text-2xl font-semibold pl-3 mt-3">Add Money</h1>
         <div class="">
           <div class="hero-content flex-col lg:flex-row-reverse">
             <div class="card w-full max-w-sm shrink-0 shadow-2xl">
               <div class="card-body">
                 <legend>Select Bank</legend>
+                <!-- select options -->
                 <select class="select">
                   <option disabled selected class="font-light">
                     select Bank
@@ -92,20 +101,29 @@
                   <option value="Nagad">Nagad</option>
                   <option value="DBBL">DBBL</option>
                 </select>
+                <!-- fieldset -->
                 <fieldset class="fieldset">
-                  <label class="label">Account NUmber</label>
+                  <label class="label">Bank Account NUmber</label>
                   <input
                     value="01773632880"
-                    id="account-Number"
                     type="number"
                     class="input"
-                    placeholder="type your number"
+                    placeholder="enter 11 digit account number"
                     maxlength="11"
                     required
                   />
-                  <label class="fieldset-label">PIN</label>
+                  <label class="label">Amount Add</label>
                   <input
-                    id="pin-Number"
+                    id="amount"
+                    type="number"
+                    class="input"
+                    placeholder="Add amount to withdraw"
+                    maxlength="11"
+                    required
+                  />
+                  <label class="fieldset-label">PIN Number</label>
+                  <input
+                    id="pin"
                     value="1234"
                     type="text"
                     class="input"
@@ -114,10 +132,59 @@
                   />
                   <div><a class="link link-hover">Forgot password?</a></div>
                   <button
-                    id="login-btn"
+                    id="add_money"
                     class="btn btn-neutral border-none bg-blue-700 mt-4"
                   >
-                    Login
+                    Add Money
+                  </button>
+                </fieldset>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- cashout -->
+      <section id="cashout">
+        <h1 class="text-2xl font-semibold pl-3 mt-3">Cashout</h1>
+        <div class="">
+          <div class="hero-content flex-col lg:flex-row-reverse">
+            <div class="card w-full max-w-sm shrink-0 shadow-2xl">
+              <div class="card-body">
+                <legend>Select Bank</legend>
+                <!-- fieldset -->
+                <fieldset class="fieldset">
+                  <label class="label">Agent Number</label>
+                  <input
+                    value="01773632880"
+                    type="number"
+                    class="input"
+                    placeholder="Enter 11 digit number"
+                    maxlength="11"
+                    required
+                  />
+                  <label class="label">Amount</label>
+                  <input
+                    id="amount"
+                    type="number"
+                    class="input"
+                    placeholder="Enter amount to withdraw"
+                    maxlength="11"
+                    required
+                  />
+                  <label class="fieldset-label">PIN Number</label>
+                  <input
+                    id="pin"
+                    value="1234"
+                    type="text"
+                    class="input"
+                    placeholder="Enter 4 digit pin Number"
+                    required
+                  />
+                  <button
+                    id="add_money"
+                    class="btn btn-neutral border-none bg-blue-700 mt-4"
+                  >
+                    Withdraw Money
                   </button>
                 </fieldset>
               </div>
@@ -126,5 +193,9 @@
         </div>
       </section>
     </section>
+
+    <!-- add java script links -->
+    <script src="./js/addMoney.js"></script>
+    <script src="./js/toggle.js"></script>
   </body>
 </html>
