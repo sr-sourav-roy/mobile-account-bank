@@ -7,6 +7,12 @@ document
     const pinNumber = getInputValueByID("cashout-pin");
     const mainBalance = getInnerTextById("main-balance");
 
+    // check this amount account:
+    if (amount > mainBalance) {
+      alert("wrong amount! please give me right number!");
+      return;
+    }
+
     // condition:
     if (agentNumber.length === 11) {
       if (pinNumber === 1234) {
