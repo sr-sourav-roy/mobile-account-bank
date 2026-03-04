@@ -16,3 +16,8 @@ function getInnerTextById(id) {
 function setInnerTextIDandValue(id, value) {
   document.getElementById(id).innerText = value;
 }
+
+// toggle handle by functions create!
+function toggleHandle(id, status) {
+  document.getElementById(id).style.display = status;
+}

@@ -78,7 +78,10 @@
             <h3 class="items-center">Pay Bill</h3>
           </div>
           <!-- card_6 -->
-          <div class="box border cursor-pointer p-3 text-center rounded-sm">
+          <div
+            id="transactions-card"
+            class="box border cursor-pointer p-3 text-center rounded-sm"
+          >
             <img class="w-8 mx-auto" src="./assets/transaction1.png" alt="" />
             <h3 class="items-center">Transactions</h3>
           </div>
@@ -194,6 +197,15 @@
           </div>
         </div>
       </section>
+      <!-- transactions -->
+      <section id="transactions" class="p-3">
+        <h1
+          class="text-2xl text-red-400 font-bold border-2 rounded-sm p-3 border-sky-700 text-center font-#11111 mt-8"
+        >
+          Transactions History
+        </h1>
+        <div id="transaction-container" class="ml-8"></div>
+      </section>
     </section>
 
     <!-- add java script links -->
@@ -201,5 +213,6 @@
     <script src="./utilities/utilites.js"></script>
     <script src="./java-script.js/addmoney.js"></script>
     <script src="./java-script.js/cashout.js"></script>
+    <script src="./java-script.js/transactions.js"></script>
   </body>
 </html>

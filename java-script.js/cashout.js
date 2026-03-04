@@ -12,6 +12,14 @@ document
       if (pinNumber === 1234) {
         const sum = mainBalance - amount;
         setInnerTextIDandValue("main-balance", sum);
+
+        // transaction history readymate set
+        const container = document.getElementById("transaction-container");
+        const p = document.createElement("p");
+        p.innerText = `
+        cashout ${amount} Tk form ${agentNumber} Agent Number
+        `;
+        container.appendChild(p);
       } else {
         alert("wrong pin Number!");
       }

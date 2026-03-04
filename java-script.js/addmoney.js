@@ -11,8 +11,17 @@ document
       if (pin === 1234) {
         const sum = mainBalance + amount;
         // document.getElementById("main-balance").innerText = sum;
-        // the function call by id and value add:
+
+        // Added by the call id and value functions:
         setInnerTextIDandValue("main-balance", sum);
+
+        // transaction history readymate set
+        const container = document.getElementById("transaction-container");
+        const p = document.createElement("p");
+        p.innerText = `
+        Added ${amount} Tk form ${accountNumber} number
+        `;
+        container.appendChild(p);
       } else {
         alert("wrong pin");
       }
